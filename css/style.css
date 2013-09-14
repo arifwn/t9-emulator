@@ -1,0 +1,129 @@
+
+.emulator {
+	width: 300px;
+	height: 400px;
+	padding: 10px;
+}
+
+.screen {
+	width: 280px;
+	height: 100px;
+	box-shadow: inset 0 0 3px rgba(0,0,0,0.7);
+	padding: 10px;
+}
+
+.screen .cursor {
+	animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.screen .current-text {
+	text-decoration: underline;
+}
+
+.screen .prev-text {
+	color: gray;
+}
+
+@-moz-keyframes blinker {  /* Decimal not necessary, 0 and 1 is enough */
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+.controller {
+	margin-top: 7px;
+	height: 30px;
+}
+
+.keypad {
+	position: relative;
+	margin-top: 10px;
+	font-size: 18px;
+}
+
+.key {
+	position: absolute;
+	width: 85px;
+	height: 50px;
+	padding: 5px;
+}
+
+.key-1 {
+	top: 0;
+	left: 0;
+}
+
+.key-2 {
+	top: 0;
+	left: 97.5px;
+}
+
+.key-3 {
+	top: 0;
+	left: 195px;
+}
+
+.key-4 {
+	top: 60px;
+	left: 0;
+}
+
+.key-5 {
+	top: 60px;
+	left: 97.5px;
+}
+
+.key-6 {
+	top: 60px;
+	left: 195px;
+}
+
+.key-7 {
+	top: 120px;
+	left: 0;
+}
+
+.key-8 {
+	top: 120px;
+	left: 97.5px;
+}
+
+.key-9 {
+	top: 120px;
+	left: 195px;
+}
+
+.key-star {
+	top: 180px;
+	left: 0;
+}
+
+.key-0 {
+	top: 180px;
+	left: 97.5px;
+}
+
+.key-space {
+	top: 180px;
+	left: 195px;
+}

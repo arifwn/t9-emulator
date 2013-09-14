@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T9 Predictive Text Input Emulator</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" type="text/css" />
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/underscore-min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/t9.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </head>
+  
+  <body>
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4">
+          
+          <div class="emulator">
+            <div class="screen">
+              <span class="prev-text"></span><span class="current-text"></span><span class="cursor">|</span>
+            </div>
+
+            <div class="controller">
+              <button class="prediction-cycle btn btn-primary"><span class="glyphicon glyphicon-refresh"></span> cycle</button>
+              <button class="delete pull-right btn btn-primary"><span class="glyphicon glyphicon-circle-arrow-left"></span> delete</button>
+            </div>
+            
+            <div class="keypad">
+              <button class="key key-1" disabled="disabled" value="1">
+                1
+              </button>
+              <button class="key key-2" value="2">
+                2 <small>abc</small>
+              </button>
+              <button class="key key-3" value="3">
+                3 <small>def</small>
+              </button>
+              <button class="key key-4" value="4">
+                4 <small>ghi</small>
+              </button>
+              <button class="key key-5" value="5">
+                5 <small>jkl</small>
+              </button>
+              <button class="key key-6" value="6">
+                6 <small>mno</small>
+              </button>
+              <button class="key key-7" value="7">
+                7 <small>pqrs</small>
+              </button>
+              <button class="key key-8" value="8">
+                8 <small>tuv</small>
+              </button>
+              <button class="key key-9" value="9">
+                9 <small>xyz</small>
+              </button>
+              <button class="key key-star" disabled="disabled" value="symbol">
+                * #
+              </button>
+              <button class="key key-0" disabled="disabled" value="0">
+                0
+              </button>
+              <button class="key key-space" value="space">
+                <small>space</small>
+              </button>
+            </div>
+          </div>
+
+          <div class="loading">
+            <div class="progress progress-striped active">
+              <div class="progress-bar"  role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
+              </div>
+            </div>
+            <p>Downloading dictionary file. Please wait...</p>
+          </div>
+        </div>
+
+        <div class="col-md-8">
+          <h1>T9 Predictive Text Input Emulator</h1>
+          <p>This is a <a href="http://en.wikipedia.org/wiki/T9_(predictive_text)">T9 Predictive Text Input Emulator</a>, implemented using <a href="http://en.wikipedia.org/wiki/Trie">Trie</a>.</p>
+          <p>Limitation:</p>
+          <ul>
+            <li>It's not context-aware or grammar-aware. No smart result ordering.</li>
+          </ul>
+          
+          <p>Sample words:</p>
+          <ul>
+            <li>testing: 8378464</li>
+            <li>super: 78737</li>
+            <li>mario: 62746</li>
+            <li>legend: 534363</li>
+            <li>and many more (over 2MB of english words)...</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
