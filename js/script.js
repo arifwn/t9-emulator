@@ -23,7 +23,7 @@
                 xhr.addEventListener("progress", function(event){
                     if (event.lengthComputable) {  
                      var percentComplete = 100 * event.loaded / event.total;
-                     console.log(percentComplete);
+                     console.log('dictionary loading at', percentComplete, '%');
                      $('.loading .progress-bar')
                         .attr('aria-valuenow', percentComplete)
                         .css('width', percentComplete + '%');
@@ -33,7 +33,7 @@
                 return xhr;
             }
         });
-        
+
         $('button.key').on('click', function(event){
             var value = $(this).val();
             if(value == 'space'){

@@ -13,7 +13,7 @@
         6: 'mno',
         7: 'pqrs',
         8: 'tuv',
-        9: 'xyz'
+        9: 'wxyz'
     };
 
     function Word(word, occurrences) {
@@ -113,7 +113,7 @@
             } else {
                 key = sequence.charAt(depth);
                 word += leaf;
-                if (depth > sequence.length && typeof(value) === 'number') {
+                if (depth >= (sequence.length - 1) && typeof(value) === 'number') {
                     words.push(word);
                 }
             }
@@ -122,8 +122,6 @@
             // the prefix to the end of the tree (`exact` is falsy), then
             // "we must go deeper"...
 
-            // if (depth > 3)
-            //     return words;
             if ((key && t9.keyMap.hasOwnProperty(key) && t9.keyMap[key].indexOf(leaf) > -1) || (!key && !exact)) {
                 t9.findWords(sequence, value, exact, words, word, depth + 1);
             }
