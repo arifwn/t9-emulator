@@ -87,7 +87,51 @@
                 currentText = currentText.slice(0, currentText.length-1);
                 $('.current-text').text(currentText);
             }
+        });
 
+        $('body').on('keydown', function(event) {
+            if (event.keyCode === 8) {
+                event.preventDefault();
+            }
+
+            switch (String.fromCharCode(event.keyCode)) {
+                case "2":
+                    $('button.key-2').focus().click();
+                    break;
+                case "3":
+                    $('button.key-3').focus().click();
+                    break;
+                case "3":
+                    $('button.key-3').focus().click();
+                    break;
+                case "4":
+                    $('button.key-4').focus().click();
+                    break;
+                case "5":
+                    $('button.key-5').focus().click();
+                    break;
+                case "6":
+                    $('button.key-6').focus().click();
+                    break;
+                case "7":
+                    $('button.key-7').focus().click();
+                    break;
+                case "8":
+                    $('button.key-8').focus().click();
+                    break;
+                case "9":
+                    $('button.key-9').focus().click();
+                    break;
+                case " ":
+                    $('button.key-space').focus().click();
+                    break;
+                case String.fromCharCode(192):
+                    $('button.prediction-cycle').focus().click();
+                    break;
+                case String.fromCharCode(8):
+                    $('button.delete').focus().click();
+                    break;
+            }
         });
 
     });

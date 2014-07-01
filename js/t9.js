@@ -113,7 +113,7 @@
             } else {
                 key = sequence.charAt(depth);
                 word += leaf;
-                if (depth >= (sequence.length - 1) && typeof(value) === 'number') {
+                if (depth >= (sequence.length - 1) && typeof(value) === 'number' && key && (t9.keyMap[key].indexOf(leaf) > -1)) {
                     words.push(word);
                 }
             }
